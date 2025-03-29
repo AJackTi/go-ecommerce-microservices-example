@@ -5,7 +5,6 @@ go 1.23.1
 require (
 	emperror.dev/errors v0.8.1
 	github.com/caarlos0/env/v11 v11.3.1
-	github.com/go-kit/kit v0.13.0
 	github.com/iancoleman/strcase v0.3.0
 	github.com/joho/godotenv v1.5.1
 	github.com/mcuadros/go-defaults v1.2.0
@@ -17,8 +16,6 @@ require (
 )
 
 require (
-	github.com/go-kit/log v0.2.0 // indirect
-	github.com/go-logfmt/logfmt v0.5.1 // indirect
 	github.com/go-logr/logr v1.4.2 // indirect
 	github.com/go-logr/stdr v1.2.2 // indirect
 	github.com/uptrace/opentelemetry-go-extra/otelutil v0.3.2 // indirect
