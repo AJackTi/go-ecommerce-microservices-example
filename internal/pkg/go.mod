@@ -1,4 +1,4 @@
-module github.com/AJackTi/go-ecommerce-microservices/internal/pkg
+module github.com/AJackTi/go-ecommerce-microservices-example/internal/pkg
 
 go 1.23.1
 

@@ -3,8 +3,8 @@ package contracts
 import (
 	"go.uber.org/fx"
 
-	"github.com/AJackTi/go-ecommerce-microservices/internal/pkg/config/environment"
-	"github.com/AJackTi/go-ecommerce-microservices/internal/pkg/logger"
+	"github.com/AJackTi/go-ecommerce-microservices-example/internal/pkg/config/environment"
+	"github.com/AJackTi/go-ecommerce-microservices-example/internal/pkg/logger"
 )
 
 type ApplicationBuilder interface {

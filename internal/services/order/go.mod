@@ -1,4 +1,4 @@
-module github.com/AJackTi/go-ecommerce-microservices/internal/services/order
+module github.com/AJackTi/go-ecommerce-microservices-example/internal/services/order
 
 go 1.23.1
 

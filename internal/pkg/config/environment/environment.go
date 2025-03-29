@@ -1,6 +1,6 @@
 package environment
 
-import "github.com/AJackTi/go-ecommerce-microservices/internal/pkg/constants"
+import "github.com/AJackTi/go-ecommerce-microservices-example/internal/pkg/constants"
 
 type Environment string
 
