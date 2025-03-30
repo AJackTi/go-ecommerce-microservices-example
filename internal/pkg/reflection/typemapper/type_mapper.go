@@ -3,6 +3,9 @@ package typemapper
 import (
 	"fmt"
 	"reflect"
+	"strings"
+
+	"github.com/iancoleman/strcase"
 )
 
 func GetGenericTypeByT[T interface{}]() reflect.Type {
@@ -31,4 +34,44 @@ func GetGenericTypeNameByT[T any]() string {
 	}
 
 	return fmt.Sprintf("*%s", t.Elem().Name())
+}
+
+// GetNonePointerTypeName returns the name of the type without its package name and its pointer.
+func GetNonePointerTypeName(input interface{}) string {
+	if input == nil {
+		return ""
+	}
+
+	t := reflect.TypeOf(input)
+	if t.Kind() != reflect.Ptr {
+		return t.Name()
+	}
+
+	return t.Elem().Name()
+}
+
+func GetSnakeTypeName(input interface{}) string {
+	if input == nil {
+		return ""
+	}
+
+	t := reflect.TypeOf(input)
+	if t.Kind() != reflect.Ptr {
+		return t.Name()
+	}
+
+	return strcase.ToSnake(t.Elem().Name())
+}
+
+func GetPackageName(value interface{}) string {
+	inputType := reflect.TypeOf(value)
+	if inputType.Kind() == reflect.Ptr {
+		inputType = inputType.Elem()
+	}
+
+	packagePath := inputType.PkgPath()
+
+	parts := strings.Split(packagePath, "./")
+
+	return parts[len(parts)-1]
 }

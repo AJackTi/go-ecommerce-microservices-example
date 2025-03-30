@@ -5,9 +5,11 @@ go 1.23.1
 require (
 	emperror.dev/errors v0.8.1
 	github.com/caarlos0/env/v11 v11.3.1
+	github.com/goccy/go-json v0.10.5
 	github.com/iancoleman/strcase v0.3.0
 	github.com/joho/godotenv v1.5.1
 	github.com/mcuadros/go-defaults v1.2.0
+	github.com/mehdihadeli/go-mediatr v1.3.0
 	github.com/nolleh/caption_json_formatter v0.2.3
 	github.com/spf13/viper v1.20.1
 	github.com/uptrace/opentelemetry-go-extra/otellogrus v0.3.2
@@ -19,8 +21,10 @@ require (
 )
 
 require (
+	github.com/ahmetb/go-linq/v3 v3.2.0 // indirect
 	github.com/go-logr/logr v1.4.2 // indirect
 	github.com/go-logr/stdr v1.2.2 // indirect
+	github.com/goccy/go-reflect v1.2.0 // indirect
 	github.com/uptrace/opentelemetry-go-extra/otelutil v0.3.2 // indirect
 	go.opentelemetry.io/otel/log v0.6.0 // indirect
 )
