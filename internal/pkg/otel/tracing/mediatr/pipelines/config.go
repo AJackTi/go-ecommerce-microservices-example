@@ -19,3 +19,17 @@ var defaultConfig = &config{
 	serviceName: "app",
 	logger:      defaultlogger.GetLogger(),
 }
+
+type optionFunc func(*config)
+
+func (o optionFunc) apply(c *config) {
+	o(c)
+}
+
+func WithLogger(l logger.Logger) Option {
+	return optionFunc(func(cfg *config) {
+		if cfg.logger != nil {
+			cfg.logger = l
+		}
+	})
+}
