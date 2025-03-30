@@ -7,14 +7,17 @@ type app struct {
 	RequestResultName string
 	RequestResult     string
 	CommandName       string
+	CommandType       string
 	Command           string
 	CommandResultName string
 	CommandResult     string
 	QueryName         string
+	QueryType         string
 	Query             string
 	QueryResultName   string
 	QueryResult       string
 	EventName         string
+	EventType         string
 	Event             string
 	EventResultName   string
 	EventResult       string
@@ -27,14 +30,17 @@ var App = app{
 	RequestResultName: "app.request_result_name",
 	RequestResult:     "app.request_result",
 	CommandName:       "app.command_name",
+	CommandType:       "app.command_type",
 	Command:           "app.command",
 	CommandResultName: "app.command_result_name",
 	CommandResult:     "app.command_result",
 	QueryName:         "app.query_name",
 	Query:             "app.query",
+	QueryType:         "app.query_type",
 	QueryResultName:   "app.query_result_name",
 	QueryResult:       "app.query_result",
 	EventName:         "app.event_name",
+	EventType:         "app.event_type",
 	Event:             "app.event",
 	EventResultName:   "app.event_result_name",
 	EventResult:       "app.event_result",

@@ -75,3 +75,33 @@ func GetPackageName(value interface{}) string {
 
 	return parts[len(parts)-1]
 }
+
+// GetTypeName returns the name of type without its package name
+func GetTypeName(input interface{}) string {
+	if input == nil {
+		return ""
+	}
+
+	t := reflect.TypeOf(input)
+	if t.Kind() != reflect.Ptr {
+		return t.Name()
+	}
+
+	return fmt.Sprintf("*%s", t.Elem().Name())
+}
+
+func GetGenericFullTypeNameByT[T any]() string {
+	t := reflect.TypeOf((*T)(nil)).Elem()
+
+	return t.String()
+}
+
+// GetFullTypeName returns the full name of the type by its package name
+func GetFullTypeName(input interface{}) string {
+	if input == nil {
+		return ""
+	}
+
+	t := reflect.TypeOf(input)
+	return t.String()
+}

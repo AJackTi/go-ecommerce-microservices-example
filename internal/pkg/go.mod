@@ -11,6 +11,7 @@ require (
 	github.com/mcuadros/go-defaults v1.2.0
 	github.com/mehdihadeli/go-mediatr v1.3.0
 	github.com/nolleh/caption_json_formatter v0.2.3
+	github.com/satori/go.uuid v1.2.0
 	github.com/spf13/viper v1.20.1
 	github.com/uptrace/opentelemetry-go-extra/otellogrus v0.3.2
 	github.com/uptrace/opentelemetry-go-extra/otelzap v0.3.2
