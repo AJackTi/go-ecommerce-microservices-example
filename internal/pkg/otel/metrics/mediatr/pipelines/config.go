@@ -19,3 +19,17 @@ var defaultConfig = &config{
 type Option interface {
 	apply(*config)
 }
+
+type optionFunc func(*config)
+
+func WithLogger(l logger.Logger) Option {
+	return optionFunc(func(cfg *config) {
+		if cfg.logger != nil {
+			cfg.logger = l
+		}
+	})
+}
+
+func (o optionFunc) apply(c *config) {
+	o(c)
+}
